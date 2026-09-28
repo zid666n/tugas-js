@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <ti tle>Document</title>
+</head>
+
+<body>
+    <script>
+        const tarif = (tujuan, berat) => {
+            let cost = 0
+
+            switch (tujuan.toLowerCase()) {
+                case "bogor":
+                    cost = 3000
+                    break;
+
+                case "depok":
+                    cost = 4000
+                    break
+
+                default:
+                    cost = 6000
+                    break;
+            }
+
+            console.log(`
+                Tujuan: ${tujuan}
+                Berat : ${berat}
+                Biaya : ${cost * berat}
+            `);
+        }
+
+        const fruits = ["apel", "nanas", "durian"]
+
+        for (let index = 0; index < fruits.length; index++) {
+            console.log(fruits[index]);
+        }
+
+    </script>
+</body>
+
+</html>

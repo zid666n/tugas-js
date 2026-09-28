@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const kelulusan = (totalKehadiran, nilaiTeori, nilaiPraktek, pinalty) => {
+            let status
+            let isLulus = true;
+
+            let rata = (nilaiTeori + nilaiPraktek) / 2
+
+            if (totalKehadiran < 90 || nilaiTeori < 75 || nilaiPraktek < 80) isLulus = false
+            // if (nilaiPraktek < 80) isLulus = false
+
+            if (rata < 80) {
+                status = "lulus biasa"
+            } else if (rata >= 80) {
+                status = "sangat baik"
+            } else {
+                status = "lulus"
+            }
+
+            if (pinalty) status = "tidak lulus"
+
+            console.log(`
+                Nama     : Ahmad Zidan
+                Rata-rata: ${rata}
+                Status   : ${isLulus ? status : "tidak lulus"}
+            `)
+        }
+    </script>
+</body>
+
+</html>
