@@ -1,0 +1,1 @@
+export const initUser = (users) => localStorage.setItem('users', users)
